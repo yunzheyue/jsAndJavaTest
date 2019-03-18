@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+   >
+
+    <Button
+        android:onClick="javaCallJS1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="java调用JS1" />
+    <Button
+        android:onClick="javaCallJS2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="java调用JS2" />
+    
+     <Button
+        android:onClick="JSCalljava"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="JS调用java" />
+     
+     <Button
+        android:onClick="netJsCalljava"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网络的JS调用本地java" />
+
+    <Button
+        android:onClick="netJsCalljava2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="真实场景-网络的JS调用本地java" />
+
+
+</LinearLayout>

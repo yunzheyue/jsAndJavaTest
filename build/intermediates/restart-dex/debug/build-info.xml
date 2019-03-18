@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="17"
+    density="xhdpi"
+    format="7"
+    timestamp="5240198070443" >
+
+    <task
+        name="javac"
+        duration="235" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="58" />
+    <task
+        name="verifier"
+        duration="41" />
+
+    <artifact
+        location="C:\Users\jl02\Desktop\wetchat\androidJavaAndJsDemo\build\outputs\apk\androidJavaAndJsDemo-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="5240198070443" >
+        <artifact
+            location="C:\Users\jl02\Desktop\wetchat\androidJavaAndJsDemo\build\outputs\apk\androidJavaAndJsDemo-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

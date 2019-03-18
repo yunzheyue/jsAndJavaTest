@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+
+    <script type="text/javascript">
+
+	function javaCallJs(){
+		 document.getElementById("content").innerHTML +=
+	         "<br\>java调用了js无参函数";
+	}
+	
+	function javaCallJswithargs(arg){
+		 document.getElementById("content").innerHTML +=   
+	         ("<br\>java调用了js带参函数，并且参数是："+arg);
+	}
+	
+	
+   function showMsg(){
+      alert("阿福你好,我是来自javascript");
+   }
+   
+   function showMsgInAndroid(){
+      myjs.showMsg('hello in android!');
+   }
+
+    </script>
+
+
+</head>
+
+
+<body>
+兄弟我是一个 html页面，这里有javascript代码，点击按钮，javascript会被调用 <br/>
+<div id="content"></div>
+</body>
+
+
+</html>

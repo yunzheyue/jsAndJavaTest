@@ -1,0 +1,19 @@
+#Internal package file, do not edit.
+#Mon Mar 18 14:11:31 CST 2019
+1.base=E\:\\AndroidStudioTest3\\androidJavaAndJsDemo\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+2.path=netJSCallJava.html
+0.baseType=DIRECTORY
+3.baseType=DIRECTORY
+2.base=E\:\\AndroidStudioTest3\\androidJavaAndJsDemo\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+3.set=ASSET
+2.set=ASSET
+1.baseType=DIRECTORY
+3.path=JavaCallJS1.html
+count=4
+1.set=ASSET
+0.path=JavaCallJS2.html
+3.base=E\:\\AndroidStudioTest3\\androidJavaAndJsDemo\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+0.set=ASSET
+0.base=E\:\\AndroidStudioTest3\\androidJavaAndJsDemo\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+2.baseType=DIRECTORY
+1.path=JsCallJava.html

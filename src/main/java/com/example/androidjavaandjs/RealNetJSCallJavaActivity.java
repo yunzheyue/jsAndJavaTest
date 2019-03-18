@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Toast;
@@ -26,7 +27,7 @@ public class RealNetJSCallJavaActivity extends Activity {
         /**
          * WebView的对象
          */
-        wv=(WebView) findViewById(R.id.webview);
+        wv = (WebView) findViewById(R.id.webview);
         /**
          * 如果访问的页面中有Javascript，则webview必须设置支持Javascript。
          */
@@ -48,12 +49,7 @@ public class RealNetJSCallJavaActivity extends Activity {
     }
 
     private class Video {
-        /**
-         * 必须加注解,不加注解，该方法无效
-         * @param itemid
-         * @param videourl
-         * @param itemtitle
-         */
+        @JavascriptInterface
         public void playVideo(int itemid, String videourl, String itemtitle) {
             // 把系统所有的播放调起来
             Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -61,11 +57,9 @@ public class RealNetJSCallJavaActivity extends Activity {
             startActivity(intent);
         }
 
-        public void offlineVideo(int itemid, String videourl, String itemtitle,String itemdesc,String itempic){
-            Toast.makeText(RealNetJSCallJavaActivity.this, "下载视频："+videourl, Toast.LENGTH_SHORT).show();
+        @JavascriptInterface
+        public void offlineVideo(int itemid, String videourl, String itemtitle, String itemdesc, String itempic) {
+            Toast.makeText(RealNetJSCallJavaActivity.this, "下载视频：" + videourl, Toast.LENGTH_SHORT).show();
         }
-
-
-
     }
 }

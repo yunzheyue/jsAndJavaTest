@@ -10,8 +10,6 @@ import android.widget.Button;
 
 /**
  * Java调用html里面的javascript代码
- *
- * @author 杨光福
  */
 public class JavaCallJSActivity1 extends Activity {
 

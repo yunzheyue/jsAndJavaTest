@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Mar 18 14:11:31 CST 2019
+#Mon Mar 18 15:00:17 CST 2019
 1.base=E\:\\AndroidStudioTest3\\androidJavaAndJsDemo\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
 2.path=netJSCallJava.html
 0.baseType=DIRECTORY

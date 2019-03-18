@@ -2,6 +2,7 @@ package com.example.androidjavaandjs;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.JavascriptInterface;
@@ -14,8 +15,6 @@ import android.widget.Toast;
  * Java调用html里面的javascript代码
  * <p/>
  * 这个案例其实是js->Java->js
- *
- * @author 杨光福
  */
 public class JavaCallJSActivity2 extends Activity {
 
@@ -42,9 +41,7 @@ public class JavaCallJSActivity2 extends Activity {
             mWebView.requestFocus();
             //支持在html中弹出对话框
             mWebView.setWebChromeClient(new MyWebChromeClient());
-
             mWebView.setOnKeyListener(new MyOnKeyListener());
-
             WebSettings webSettings = mWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
             webSettings.setDefaultTextEncodingName("utf-8");
@@ -98,8 +95,9 @@ public class JavaCallJSActivity2 extends Activity {
     }
 
 
-    //这是提供给JavaScriptInterface的对象，在这里对于每一个提供给JS的方法都要使用@JavascriptInterface注解标注
-    public class JsInterface {
+    //这是提供给JavaScriptInterface的对象，
+    //在这里对于每一个提供给JS的方法都要使用@JavascriptInterface注解标注，否则对于api>17就会出现警告
+    private class JsInterface {
         @JavascriptInterface
         public void JavacallHtml() {
             runOnUiThread(new Runnable() {
@@ -111,13 +109,15 @@ public class JavaCallJSActivity2 extends Activity {
                 }
             });
         }
-
+//        从js传递过来数据
         @JavascriptInterface
-        public void JavacallHtml2() {
+        public void JavacallHtml2(final String name) {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    mWebView.loadUrl("javascript: showFromHtml2('我是阿福')");
+                    Log.e("TAG", "name==" + name);
+//                    注意在这里方法参数传递时的拼串操作
+                    mWebView.loadUrl("javascript: showFromHtml2('我是" + name + "')");
                     Toast.makeText(JavaCallJSActivity2.this, "clickBtn2",
                             Toast.LENGTH_SHORT).show();
                 }
